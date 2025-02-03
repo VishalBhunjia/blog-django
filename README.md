@@ -84,10 +84,12 @@ pip install -r requirements.txt
 ### Provide Your Secret Keys
 
 ```bash
-from django.core.management.utils import get_random_secret_key  
-get_random_secret_key()
+python manage.py shell
+>>>from django.core.management.utils import get_random_secret_key  
+>>>get_random_secret_key()
 ```
-Copy the generated key then create a .env file in the project directory and paste it in the format below:
+Copy the generated key then exit the shell using 'exit()'.
+Create a .env file in the project directory and paste the key in the format below:
 
 ```bash
 SECRET_KEY=<Paste your genrated key here>
